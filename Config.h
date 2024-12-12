@@ -67,7 +67,7 @@
 
 // ST4 INTERFACE --------------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#ST4
 // *** It is up to you to verify the interface meets the electrical specifications of any connected device, use at your own risk ***
-#define ST4_INTERFACE                 OFF //    OFF, ON, ON_PULLUP enables interface. <= 1X guides unless hand control mode.  Option
+#define ST4_INTERFACE                 ON //    OFF, ON, ON_PULLUP enables interface. <= 1X guides unless hand control mode.  Option
                                           //         During goto btn press: aborts slew or continue meridian flip pause home
 #define ST4_HAND_CONTROL              OFF //    OFF, ON for hand controller special features and SHC support.                 Option
                                           //         Hold [E]+[W] btns >2s: Guide rate   [E]-  [W]+  [N] trk on/off [S] sync
@@ -123,7 +123,7 @@
 #define AXIS1_STEPS_PER_WORMROT         0 //      0, n. Number steps per worm rotation (PEC Eq mode only, 0 disables PEC.)   <-Req'd
                                           //         n = (AXIS1_STEPS_PER_DEGREE*360)/reduction_final_stage
 
-#define AXIS1_DRIVER_MODEL            OFF //    OFF, (See above.) Stepper driver model.                                      <-Often
+#define AXIS1_DRIVER_MODEL            ON //    OFF, (See above.) Stepper driver model.                                      <-Often
 #define AXIS1_DRIVER_MICROSTEPS       OFF //    OFF, n. Microstep mode when tracking.                                        <-Often
 #define AXIS1_DRIVER_MICROSTEPS_GOTO  OFF //    OFF, n. Microstep mode used during gotos.                                     Option
 #define AXIS1_DRIVER_IHOLD            OFF //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
@@ -142,7 +142,7 @@
 #define AXIS2_STEPS_PER_DEGREE    12800.0 //  12800, n. Number of steps per degree:                                          <-Req'd
                                           //         n = (stepper_steps * micro_steps * overall_gear_reduction)/360.0
 
-#define AXIS2_DRIVER_MODEL            OFF //    OFF, (See above.) Stepper driver model.                                      <-Often
+#define AXIS2_DRIVER_MODEL            ON //    OFF, (See above.) Stepper driver model.                                      <-Often
 #define AXIS2_DRIVER_MICROSTEPS       OFF //    OFF, n. Microstep mode when tracking.                                        <-Often
 #define AXIS2_DRIVER_MICROSTEPS_GOTO  OFF //    OFF, n. Microstep mode used during gotos.                                     Option
 #define AXIS2_DRIVER_IHOLD            OFF //    OFF, n, (mA.) Current during standstill. OFF uses IRUN/2.0                    Option
@@ -158,7 +158,7 @@
 
 // AXIS3 ROTATOR
 // see https://onstep.groups.io/g/main/wiki/Configuration-Rotator-and-Focusers#AXIS3
-#define ROTATOR                       OFF //    OFF, ON to enable the rotator (or de-rotator for ALTAZM mounts.)              Option
+#define ROTATOR                       ON //    OFF, ON to enable the rotator (or de-rotator for ALTAZM mounts.)              Option
 #define AXIS3_STEPS_PER_DEGREE       64.0 //   64.0, n. Number of steps per degree for rotator/de-rotator.                    Adjust
                                           //         Alt/Az de-rotation: n = (num_circumference_pixels * 2)/360, minimum
 #define AXIS3_SLEW_RATE_DESIRED       1.0 //    1.0, n, (degrees/second) Maximum speed depends on processor.                  Adjust
@@ -175,7 +175,7 @@
 
 // AXIS4 FOCUSER 1
 // see https://onstep.groups.io/g/main/wiki/Configuration-Rotator-and-Focusers#AXIS4
-#define FOCUSER1                      OFF //    OFF, ON to enable this focuser.                                               Option
+#define FOCUSER1                      ON //    OFF, ON to enable this focuser.                                               Option
 #define AXIS4_STEPS_PER_MICRON        0.5 //    0.5, n. Steps per micrometer. Figure this out by testing or other means.      Adjust
 #define AXIS4_SLEW_RATE_DESIRED       500 //    500, n, Where n=200..5000 (um/s.) Max microns/second. In DC mode, max pwr %   Adjust
 
@@ -193,7 +193,7 @@
 
 // AXIS5 FOCUSER 2
 // see https://onstep.groups.io/g/main/wiki/Configuration-Rotator-and-Focusers#AXIS5
-#define FOCUSER2                      OFF //    OFF, ON to enable this focuser.                                               Option
+#define FOCUSER2                      ON //    OFF, ON to enable this focuser.                                               Option
 #define AXIS5_STEPS_PER_MICRON        0.5 //    0.5, n. Steps per micrometer. Figure this out by testing or other means.      Adjust
 #define AXIS5_SLEW_RATE_DESIRED       500 //    500, n, Where n=200..5000 (um/s.) Max microns/second. In DC mode, max pwr %   Adjust
 
