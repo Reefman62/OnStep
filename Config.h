@@ -17,14 +17,14 @@
 //   *** to be sure it matches your wiring.            *** USE AT YOUR OWN RISK ***                                           ***
 
 //      Parameter Name              Value   Default  Notes                                                                      Hint
-#define PINMAP                        OFF //    OFF, Choose from: MksGenL2, MiniPCB2, MaxPCB2, MaxESP3, CNC3, STM32Blue,     <-Req'd
+#define PINMAP                        ON //    OFF, Choose from: MksGenL2, MiniPCB2, MaxPCB2, MaxESP3, CNC3, STM32Blue,     <-Req'd
                                           //         MaxSTM3, FYSETC_S6_2, etc.  Other boards and more info. in Constants.h
 
 // SERIAL PORT COMMAND CHANNELS --------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#SERIAL
 #define SERIAL_A_BAUD_DEFAULT        9600 //   9600, n. Where n=9600,19200,57600,115200 (common baud rates.)                  Infreq
 #define SERIAL_B_BAUD_DEFAULT        9600 //   9600, n. See (src/HAL/) for your MCU Serial port # etc.                        Option
-#define SERIAL_B_ESP_FLASHING         OFF //    OFF, ON Upload ESP8266 WiFi firmware through SERIAL_B with :ESPFLASH# cmd.    Option
-#define SERIAL_C_BAUD_DEFAULT         OFF //    OFF, n, ON for ESP32 Bluetooth.                                               Option
+#define SERIAL_B_ESP_FLASHING         ON //    OFF, ON Upload ESP8266 WiFi firmware through SERIAL_B with :ESPFLASH# cmd.    Option
+#define SERIAL_C_BAUD_DEFAULT         ON //    OFF, n, ON for ESP32 Bluetooth.                                               Option
 #define SERIAL_C_BLUETOOTH_NAME  "OnStep" // "On..", Bluetooth device name for ESP32.                                         Option
 
 // MOUNT TYPE ----------------------------------------- see https://onstep.groups.io/g/main/wiki/Configuration-Controller#MOUNT_TYPE
@@ -58,7 +58,7 @@
 #define LIMIT_SENSE                   OFF //    OFF, ON* limit sense switch close to Gnd stops gotos and/or tracking.         Option
 #define LIMIT_SENSE_STATE             LOW //    LOW, For NO (normally open) switches, HIGH for NC (normally closed.)          Adjust
 
-#define PEC_SENSE                     OFF //    OFF, ON*, n, sense digital OR n=0 to 1023 (0 to 3.3V or 5V) analog threshold. Option
+#define PEC_SENSE                      OFF //    OFF, ON*, n, sense digital OR n=0 to 1023 (0 to 3.3V or 5V) analog threshold. Option
 #define PEC_SENSE_STATE              HIGH //   HIGH, Senses the PEC signal rising edge or use LOW for falling edge.           Adjust
                                           //         Ignored in ALTAZM mode.
 
@@ -158,7 +158,7 @@
 
 // AXIS3 ROTATOR
 // see https://onstep.groups.io/g/main/wiki/Configuration-Rotator-and-Focusers#AXIS3
-#define ROTATOR                       OFF //    OFF, ON to enable the rotator (or de-rotator for ALTAZM mounts.)              Option
+#define ROTATOR                       ON //    OFF, ON to enable the rotator (or de-rotator for ALTAZM mounts.)              Option
 #define AXIS3_STEPS_PER_DEGREE       64.0 //   64.0, n. Number of steps per degree for rotator/de-rotator.                    Adjust
                                           //         Alt/Az de-rotation: n = (num_circumference_pixels * 2)/360, minimum
 #define AXIS3_SLEW_RATE_DESIRED       1.0 //    1.0, n, (degrees/second) Maximum speed depends on processor.                  Adjust
@@ -175,7 +175,7 @@
 
 // AXIS4 FOCUSER 1
 // see https://onstep.groups.io/g/main/wiki/Configuration-Rotator-and-Focusers#AXIS4
-#define FOCUSER1                      OFF //    OFF, ON to enable this focuser.                                               Option
+#define FOCUSER1                      ON //    OFF, ON to enable this focuser.                                               Option
 #define AXIS4_STEPS_PER_MICRON        0.5 //    0.5, n. Steps per micrometer. Figure this out by testing or other means.      Adjust
 #define AXIS4_SLEW_RATE_DESIRED       500 //    500, n, Where n=200..5000 (um/s.) Max microns/second. In DC mode, max pwr %   Adjust
 
@@ -193,7 +193,7 @@
 
 // AXIS5 FOCUSER 2
 // see https://onstep.groups.io/g/main/wiki/Configuration-Rotator-and-Focusers#AXIS5
-#define FOCUSER2                      OFF //    OFF, ON to enable this focuser.                                               Option
+#define FOCUSER2                      ON //    OFF, ON to enable this focuser.                                               Option
 #define AXIS5_STEPS_PER_MICRON        0.5 //    0.5, n. Steps per micrometer. Figure this out by testing or other means.      Adjust
 #define AXIS5_SLEW_RATE_DESIRED       500 //    500, n, Where n=200..5000 (um/s.) Max microns/second. In DC mode, max pwr %   Adjust
 
@@ -211,7 +211,7 @@
 
 // AUXILIARY FEATURE CONTROL ------------------------------ see https://onstep.groups.io/g/main/wiki/6-ConfigurationMaster#AUXILIARY
 // For additional infrequently used _PURPOSE options see Constants.h "various auxillary features"
-#define FEATURE_LIST_DS               OFF //    OFF, temporarily set ON to list ds18b20 and ds2413 device serial numbers.     Adjust
+#define FEATURE_LIST_DS               ON //    OFF, temporarily set ON to list ds18b20 and ds2413 device serial numbers.     Adjust
 #define FEATURE1_NAME          "FEATURE1" // "FE..", Name of feature being controlled.                                        Adjust
 #define FEATURE1_PURPOSE              OFF //    OFF, SWITCH, ANALOG_OUT, DEW_HEATER, etc.                                     Option
 #define FEATURE1_TEMP                 OFF //    OFF, DS1820, n. Where n is the ds18b20 s/n for DEW_HEATER temperature.        Adjust
