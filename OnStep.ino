@@ -223,7 +223,7 @@ void setup() {
     SerialGPS.begin(SERIAL_GPS_BAUD);
   #endif
 #endif
-#if ST4_HAND_CONTROL == ON && ST4_INTERFACE != OFF
+#if ST4_HAND_CONTROL == ON && ST4_INTERFACE != ON
   SerialST4.begin();
 #endif
 
